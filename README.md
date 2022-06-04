@@ -10,6 +10,8 @@
 ![](https://github.com/GalliFrey7/webproject/blob/master/images/detail%20page.png)
 ![](https://github.com/GalliFrey7/webproject/blob/master/images/detail%20page2.png)
 
+## Search by genre and search by title works. Data is uploaded via django admin
+
 ## copyright section
 ![](https://github.com/sacral1/Web_Final/blob/main/imgme/copy.png)
 
