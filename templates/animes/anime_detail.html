@@ -1,0 +1,47 @@
+{% extends 'animes/base.html' %}
+{% block title %} {{ anime.title }} {% endblock title %}
+{% block header %} bg1 {% endblock header %}
+{% block container %}
+    <div class="container py-md-3">
+{% endblock container %}
+
+{% block sidebar %}
+    <div class="side-bar col-lg-4">
+{% endblock sidebar %}
+
+{% block anime %}
+                <div class="left-ads-display col-lg-8">
+                    <div class="row">
+                        <div class="desc1-left col-md-6">
+                            <img src="{{anime.poster.url}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="desc1-right col-md-6 pl-lg-4">
+                            <h3 class="editContent" style="outline: none; cursor: inherit;">{{anime.title}}</h3>
+                            <h5 class="editContent"></h5>
+                            <ul>
+                                <li style="list-style: none"><span><b>Год:</b> {{anime.year}}</span></li>
+                                <li style="list-style: none"><span><b>Страна:</b> {{anime.country}}</span>
+                                </li>
+                                <li style="list-style: none"><span><b>Слоган:</b> {{anime.tagline}}</span>
+                                </li>
+                                <li style="list-style: none">
+                                    <span><b>Режиссер:</b> {{anime.directors}}</span></li>
+                                <li style="list-style: none"><span><b>Жанр:</b> 
+                                    {% for genre in anime.genres.all %}
+                                        {{ genre.name }}
+                                    {% endfor %}</span>
+                                </li>
+                        </div>
+                    </div>
+                    <div class="row sub-para-w3layouts mt-5">
+
+                        <h3 class="shop-sing editContent" style="outline: none; cursor: inherit;">
+                            Об аниме {{anime.title}}</h3>
+
+                        <p class="editContent" style="outline: none; cursor: inherit;">{{anime.description}}</p>
+                        <p class="mt-3 italic-blue editContent"
+                           style="outline: none; cursor: inherit;">
+                        </p>
+                        <button type="button">Купить для просмотра</button>
+                    </div>
+{% endblock anime %}

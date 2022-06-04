@@ -1,0 +1,1 @@
+web: gunicorn animi_project.wsgi --log-file -
